@@ -15,43 +15,53 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-    "For_Loop": {
-        "prefix": "for",
-        "body": [
-          "for (const ${2:element} of ${1:array}) {",
-          "\t$0",
-          "}"
-        ],
-        "description": "For Loop"
+	"For_Loop": {
+		"prefix": "for",
+		"body": [
+			"for (const ${2:element} of ${1:array}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "For Loop"
 	},
-
 	"btn-success": {
-        "prefix": "@dry-btn-success",
-        "body": [
-          "<a class=\"btn btn-success\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
-        ],
-        "description": "Button success"
+		"prefix": "@dry-btn-success",
+		"body": [
+			"<a class=\"btn btn-success\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+		],
+		"description": "Button success"
 	},
-
 	"btn-warning": {
-        "prefix": "@dry-btn-warning",
-        "body": [
-          "<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
-        ],
-        "description": "Button warning"
+		"prefix": "@dry-btn-warning",
+		"body": [
+			"<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+		],
+		"description": "Button warning"
 	},
-	
 	"btn-info": {
-        "prefix": "@dry-btn-info",
-        "body": [
-          "<a class=\"btn btn-info\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
-        ],
-        "description": "Button info"
+		"prefix": "@dry-btn-info",
+		"body": [
+			"<a class=\"btn btn-info ${1:element}\"><i class=\"fa fa-${2:element}\"></i> ${3:element}</a>"
+		],
+		"description": "Button info"
 	},
-	
-	"table-responsive": {
-        "prefix": "@dry-table-responsive",
-        "body": [
+	"btn-back": {
+		"prefix": "@dry-btn-back",
+		"body": [
+			"<a class=\"btn btn-warning goBack pull-right\"> <i class=\"fa fa-arrow-left\"></i> ${1:Atrás}</a> "
+		],
+		"description": "Create the 'go to back' button"
+	},
+	"btn-add": {
+		"prefix": "@dry-btn-add",
+		"body": [
+			"<a class=\"btn btn-info addNew pull-right\" id=\"${1:id}\"> <i class=\"fa fa-plus\"></i> ${2:Agregar}</a> "
+		],
+		"description": "Create the 'go to back' button"
+	},
+	"@¡table-responsive": {
+		"prefix": "@dry-table-responsive",
+		"body": [
 			"<div class=\"table-responsive\">",
 			"\t<table class=\"table\">",
 			"\t\t <thead>",
@@ -66,10 +76,9 @@
 			"\t\t </tbody>",
 			"\t</table>",
 			"</div>"
-        ],
-        "description": "Table responsive"
+		],
+		"description": "Table responsive"
 	},
-
 	"jq-event": {
 		"prefix": "@dry-jq-event",
 		"body": [
@@ -79,7 +88,6 @@
 		],
 		"description": "Create a jQuery event"
 	},
-
 	"ajax": {
 		"prefix": "@dry-ajax",
 		"body": [
@@ -95,7 +103,6 @@
 		],
 		"description": "Ajax Function declaration"
 	},
-
 	"call-ajax": {
 		"prefix": "@dry-call-ajax",
 		"body": [
@@ -106,7 +113,6 @@
 		],
 		"description": "Call ajax function"
 	},
-
 	"div-row": {
 		"prefix": "@dry-div-row",
 		"body": [
@@ -116,7 +122,6 @@
 		],
 		"description": "Create a div row"
 	},
-
 	"div-col": {
 		"prefix": "@dry-div-col",
 		"body": [
@@ -126,10 +131,9 @@
 		],
 		"description": "Create a div row"
 	},
-
 	"js-fill-datatable": {
 		"prefix": "@dry-fill-datatable",
-		"body":[
+		"body": [
 			"$.each(data,function(i,item){",
 			"\tvar rowNode = ${1:table};",
 			"\tvar options = '${2:options}';",
@@ -137,13 +141,8 @@
 			"\t${1:table}.row.add( [ item.${3:data1}, item.${4:data2}, options] )",
 			"\t.draw()",
 			"\t.node()",
-			"});"	
+			"});"
 		],
 		"description": "Fill datatable with JS"
-	}
-	
-		
+	},
 }
-
-
-	
