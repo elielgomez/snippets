@@ -1,0 +1,149 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+    "For_Loop": {
+        "prefix": "for",
+        "body": [
+          "for (const ${2:element} of ${1:array}) {",
+          "\t$0",
+          "}"
+        ],
+        "description": "For Loop"
+	},
+
+	"btn-success": {
+        "prefix": "@dry-btn-success",
+        "body": [
+          "<a class=\"btn btn-success\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+        ],
+        "description": "Button success"
+	},
+
+	"btn-warning": {
+        "prefix": "@dry-btn-warning",
+        "body": [
+          "<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+        ],
+        "description": "Button warning"
+	},
+	
+	"btn-info": {
+        "prefix": "@dry-btn-info",
+        "body": [
+          "<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+        ],
+        "description": "Button info"
+	},
+	
+	"@¡table-responsive": {
+        "prefix": "@dry-table-responsive",
+        "body": [
+			"<div class=\"table-responsive\">",
+			"\t<table class=\"table\">",
+			"\t\t <thead>",
+			"\t\t\t <tr>",
+			"\t\t\t\t <th>${1:element}</th>",
+			"\t\t\t </tr>",
+			"\t\t </thead>",
+			"\t\t <tbody>",
+			"\t\t\t <tr>",
+			"\t\t\t\t <td></td>",
+			"\t\t\t </tr>",
+			"\t\t </tbody>",
+			"\t</table>",
+			"</div>"
+        ],
+        "description": "Table responsive"
+	},
+
+	"jq-event": {
+		"prefix": "@dry-jq-event",
+		"body": [
+			"$(\"${1:element}\").on(\"${2:event}\", function(){",
+			"\t${3:func}",
+			"}"
+		],
+		"description": "Create a jQuery event"
+	},
+
+	"ajax": {
+		"prefix": "@dry-ajax",
+		"body": [
+			"function _ajax(url_ajax,data, data_type='json',type='post',async=true){",
+			"\treturn $.ajax({",
+			"\t\turl: url+url_ajax,",
+			"\t\ttype: type",
+			"\t\tdata: data",
+			"\t\tdataType: data_type",
+			"\t\tasync:async",
+			"\t});",
+			"}"
+		],
+		"description": "Ajax Function declaration"
+	},
+
+	"call-ajax": {
+		"prefix": "@dry-call-ajax",
+		"body": [
+			"_ajax('${1:function}', ${2:data_send}).success(function(response){",
+			"\tconsole.log('${1:function}', response);",
+			"\t${3:code}",
+			"})"
+		],
+		"description": "Call ajax function"
+	},
+
+	"div-row": {
+		"prefix": "@dry-div-row",
+		"body": [
+			"<div class=\"row\">",
+			"\t${1:content}",
+			"</div>"
+		],
+		"description": "Create a div row"
+	},
+
+	"div-col": {
+		"prefix": "@dry-div-col",
+		"body": [
+			"<div class=\"col-md-${1:cols}\">",
+			"\t${2:content}",
+			"</div>"
+		],
+		"description": "Create a div row"
+	},
+
+	"js-fill-datatable": {
+		"prefix": "@dry-fill-datatable",
+		"body":[
+			"$.each(data,function(i,item){",
+			"\tvar rowNode = ${1:table};",
+			"\tvar options = '${2:options}';",
+			"",
+			"\t${1:table}.row.add( [ item.${3:data1}, item.${4:data2}, options] )",
+			"\t.draw()",
+			"\t.node()",
+			"});"	
+		],
+		"description": "Fill datatable with JS"
+	}
+	
+		
+}
+
+
+	
