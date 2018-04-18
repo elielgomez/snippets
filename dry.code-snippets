@@ -44,12 +44,12 @@
 	"btn-info": {
         "prefix": "@dry-btn-info",
         "body": [
-          "<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+          "<a class=\"btn btn-info\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
         ],
         "description": "Button info"
 	},
 	
-	"@¡table-responsive": {
+	"table-responsive": {
         "prefix": "@dry-table-responsive",
         "body": [
 			"<div class=\"table-responsive\">",
