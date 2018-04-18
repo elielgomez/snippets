@@ -25,18 +25,18 @@
 		"description": "For Loop"
 	},
 	"btn-success": {
-		"prefix": "@dry-btn-success",
-		"body": [
-			"<a class=\"btn btn-success\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
-		],
-		"description": "Button success"
+        "prefix": "@dry-html-btn-success",
+        "body": [
+          "<a class=\"btn btn-success\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+        ],
+        "description": "Button success"
 	},
 	"btn-warning": {
-		"prefix": "@dry-btn-warning",
-		"body": [
-			"<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
-		],
-		"description": "Button warning"
+        "prefix": "@dry-html-btn-warning",
+        "body": [
+          "<a class=\"btn btn-warning\"><i class=\"fa fa-${1:element}\"></i> ${2:element}</a>"
+        ],
+        "description": "Button warning"
 	},
 	"btn-info": {
 		"prefix": "@dry-btn-info",
@@ -80,7 +80,7 @@
 		"description": "Table responsive"
 	},
 	"jq-event": {
-		"prefix": "@dry-jq-event",
+		"prefix": "@dry-js-jq-event",
 		"body": [
 			"$(\"${1:element}\").on(\"${2:event}\", function(){",
 			"\t${3:func}",
@@ -89,7 +89,7 @@
 		"description": "Create a jQuery event"
 	},
 	"ajax": {
-		"prefix": "@dry-ajax",
+		"prefix": "@dry-js-ajax",
 		"body": [
 			"function _ajax(url_ajax,data, data_type='json',type='post',async=true){",
 			"\treturn $.ajax({",
@@ -104,7 +104,7 @@
 		"description": "Ajax Function declaration"
 	},
 	"call-ajax": {
-		"prefix": "@dry-call-ajax",
+		"prefix": "@dry-js-call-ajax",
 		"body": [
 			"_ajax('${1:function}', ${2:data_send}).success(function(response){",
 			"\tconsole.log('${1:function}', response);",
@@ -114,7 +114,7 @@
 		"description": "Call ajax function"
 	},
 	"div-row": {
-		"prefix": "@dry-div-row",
+		"prefix": "@dry-html-div-row",
 		"body": [
 			"<div class=\"row\">",
 			"\t${1:content}",
@@ -123,7 +123,7 @@
 		"description": "Create a div row"
 	},
 	"div-col": {
-		"prefix": "@dry-div-col",
+		"prefix": "@dry-html-div-col",
 		"body": [
 			"<div class=\"col-md-${1:cols}\">",
 			"\t${2:content}",
@@ -132,8 +132,8 @@
 		"description": "Create a div row"
 	},
 	"js-fill-datatable": {
-		"prefix": "@dry-fill-datatable",
-		"body": [
+		"prefix": "@dry-js-fill-datatable",
+		"body":[
 			"$.each(data,function(i,item){",
 			"\tvar rowNode = ${1:table};",
 			"\tvar options = '${2:options}';",
