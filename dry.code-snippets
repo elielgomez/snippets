@@ -41,6 +41,32 @@
 		], 
 		"description": "Create the echo function with the base_url(); inside of the php tag "
 	},
+
+	"return_db_get": {
+		"prefix": "@php-db-get", 
+		"scope": "php",
+		"body": [
+			"return $this->db->get()->result_array();"
+		], 
+		"description": "return the array results, to use on models "
+	},
+	"nav-tabs": {
+		"prefix": "@html-nav-tab", 
+		"scope": "php, html", 
+		"body": [
+			"<ul class=\"nav nav-tabs\" id=\"${1:main-tab}\" role=\"tablist\">", 
+			"\t<li class=\"nav-item\" >", 
+			"\t\t<a class=\"nav-link active\" id=\"${2:main-link}\" data-toggle=\"tab\" href=\"#${3:main-tab}\"> ${4:main-link-title} </a>", 
+			"\t</li>", 
+			"</ul>", 
+			"<div class=\"tab-content\" id=\"${5:main-tab-content}\">", 
+			"\t<div class=\"tab-pane fade show active\" id=\"${6:main-tab}\" role=\"tabpanel\"> ", 
+			"\t\t${7:content}", 
+			"\t</div>",
+			"</div>"
+		], 
+		"description": "Add the nav tab panel"
+	},
 	"btn-success": {
         "prefix": "@dry-html-btn-success",
         "body": [
