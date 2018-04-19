@@ -24,6 +24,23 @@
 		],
 		"description": "For Loop"
 	},
+
+	"echo" : {
+		"prefix": "@php-echo-html", 
+		"scope": "php, html",
+		"body" : [
+			"<?php echo ${1:item} ?>"
+		], 
+		"description": "create the php tag and append the echo function"
+	},
+	"base_url": {
+		"prefix": "@php-echo-base_url", 
+		"scope": "php, html", 
+		"body": [
+			"<?php echo base_url(); ?>${1}"
+		], 
+		"description": "Create the echo function with the base_url(); inside of the php tag "
+	},
 	"btn-success": {
         "prefix": "@dry-html-btn-success",
         "body": [
@@ -54,19 +71,20 @@
 	},
 	"btn-add": {
 		"prefix": "@dry-btn-add",
+		"scope": "php, html",
 		"body": [
 			"<a class=\"btn btn-info add-new pull-right\" id=\"${1:id}\"> <i class=\"fa fa-plus\"></i> ${2:Agregar}</a> "
 		],
-		"description": "Create the 'go to back' button"
+		"description": "Create the 'add new' button"
 	},
 	"@¡table-responsive": {
 		"prefix": "@dry-table-responsive",
 		"body": [
-			"<div class=\"table-responsive\">",
+			"<div class=\"table-responsive ${1:table-striped}\">",
 			"\t<table class=\"table\">",
 			"\t\t <thead>",
 			"\t\t\t <tr>",
-			"\t\t\t\t <th>${1:element}</th>",
+			"\t\t\t\t <th>${2:element}</th>",
 			"\t\t\t </tr>",
 			"\t\t </thead>",
 			"\t\t <tbody>",
